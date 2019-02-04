@@ -12,7 +12,8 @@ include('connect_mysql.php');
 <form method="post" action="insert_user.php">
     <input type="hidden" name="submitted" value="true">
     <fieldset>
-        <label>zelenina: <input type="text" name="zelenina"></label>
+        <label>username: <input type="text" name="name"></label>
+        <label>password: <input type="password" name="pswd"></label>
     </fieldset>
     <br/>
     <input type="submit" value="Register">

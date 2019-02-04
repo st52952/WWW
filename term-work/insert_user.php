@@ -1,10 +1,11 @@
 <?php
 if(isset($_POST['submitted'])){
   include('connect_mysql.php');
-  $zeli = $_POST['zelenina'];
+  $username = $_POST['name'];
+  $pswd = $_POST['pswd'];
 
-  $statement = $db->prepare("insert into vegetable(name) values (?)");
-  $statement->bind_param("s", $zeli);
+  $statement = $db->prepare("insert into users(nick,password) values (?,?)");
+  $statement->bind_param("ss", $username, $pswd);
   $statement->execute();
 }
 
